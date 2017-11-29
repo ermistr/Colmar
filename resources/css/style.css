@@ -1,0 +1,83 @@
+html, body {
+  font-family: 'Quicksand','Verdana', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+h1, h2, h3 {
+  font-family: 'Heebo', 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+h4 {
+
+}
+.container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.flex {
+  display: flex;
+}
+.mobile {
+  display: none;
+}
+@media only screen and (max-width:899px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: inherit;
+  }
+}
+/*--------------------Header--------------------*/
+header {
+  background-color: white;
+  border-bottom: 2px darkgray solid;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+header > div {
+  height: 64px;
+  align-items: center;
+}
+.logo {
+  align-items: center;
+  flex-grow: 1;
+}
+header nav li {
+  display: inline-block;
+  margin-left: 16px;
+}
+@media only screen and (max-width:480px) {
+  .logo {
+    flex-grow: 0;
+  }
+  header nav {
+    width: 100%;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
