@@ -162,7 +162,16 @@ header a {
   }
 }
 /*--------------------Info and Thesis Section--------------------*/
-#info, #thesis {
+#info {
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+#thesis h2 {
+  width: 100%;
+  text-align: center;
+}
+#thesis > div {
   align-items: flex-start;
   justify-content: space-between;
   padding-bottom: 1.5rem;
@@ -191,6 +200,17 @@ header a {
 }
 .feature { /* Add gray background */
   background-color: lightgray;
+}
+@media only screen and (max-width: 768px) {
+  .showcase {
+    min-width: 15rem;
+  }
+  .side-content {
+    min-width: 15rem;
+  }
+  .side-content img {
+    max-width: 6.4rem;
+  }
 }
 @media only screen and (max-width: 480px) {
   .showcase {
