@@ -5,7 +5,7 @@ html, body {
   text-align: left;
 }
 a {
-  color: lightblue;
+  color: blue;
   text-decoration: none;
 }
 p {
@@ -27,8 +27,8 @@ h2 {
   line-height: 2rem;
 }
 h3 {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1rem;
 }
 .emph { /*Emphasize with bold text & light shadow*/
   font-weight: bold;
@@ -54,12 +54,16 @@ h3 {
 .button {
   background-color: darkblue;
   border-radius: .25rem;
-  line-height: 2;
   color: white;
+  display: inline-block;
+  line-height: 2;
   text-align: center;
   width: 100%;
-  display: inline-block;
 }
+.button a {
+  color: white;
+}
+
 @media only screen and (max-width:959px) {
   .container {
     width: 100%;
@@ -156,4 +160,60 @@ header a {
     height: auto;
     margin: 0;
   }
+}
+/*--------------------Info and Thesis Section--------------------*/
+#info {
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+.showcase {
+  width: 30rem;
+  padding: 1.5rem 1rem;
+}
+.showcase img, video {
+  width: 30rem;
+  overflow: hidden;
+}
+.side-content {
+  flex-direction: column;
+  align-items: flex-end;
+  width: 28rem;
+}
+.side-content img {
+  width: 8.4rem;
+  margin-right: 1rem;
+}
+.info-piece {
+  width: 25rem;
+  justify-content: space-around;
+  padding: 1rem 1.5rem;
+}
+.info-piece:last-child {
+  background-color: lightgray;
+}
+/*--------------------Course Catalog Section--------------------*/
+#courses {
+  background-color: lightgray;
+}
+#courses h2 {
+  text-align: center;
+}
+.catalog {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.course-info {
+  background-color: white;
+  margin: 1rem 1rem;
+  width: 15rem;
+  height: 22rem;
+}
+.course-img {
+  width: 100%;
+}
+.course-info p {
+  padding: 1rem 1rem;
+}
+.course-info h3 {
+  padding-left: 1rem;
 }
