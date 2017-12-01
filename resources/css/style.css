@@ -14,7 +14,7 @@ p {
 }
 /*---------------Headings and 'special' font styles---------------*/
 h1, h2, h3 {
-  font-family: 'Heebo', 'Trebuchet MS', sans-serif;
+  font-family: 'Rambla', 'Trebuchet MS', sans-serif;
   font-weight: 700;
   padding: .75em 0;
 }
@@ -28,7 +28,7 @@ h2 {
 }
 h3 {
   font-size: 1.25rem;
-  line-height: 1rem;
+  line-height: 1.25rem;
 }
 .emph { /*Emphasize with bold text & light shadow*/
   font-weight: bold;
@@ -143,7 +143,7 @@ header a {
   flex-direction: column;
   padding: 0 1.5rem;
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
   .banner-img img {
     width: 25rem;
     height: 20rem;
@@ -162,38 +162,64 @@ header a {
   }
 }
 /*--------------------Info and Thesis Section--------------------*/
-#info {
+#info, #thesis {
+  align-items: flex-start;
   justify-content: space-between;
   padding-bottom: 1.5rem;
 }
 .showcase {
-  width: 30rem;
+  max-width: 30rem;
+  min-width: 20rem;
   padding: 1.5rem 1rem;
 }
 .showcase img, video {
-  width: 30rem;
+  width: 100%;
   overflow: hidden;
 }
 .side-content {
   flex-direction: column;
-  align-items: flex-end;
   width: 28rem;
 }
 .side-content img {
-  width: 8.4rem;
+  max-width: 8.4rem;
   margin-right: 1rem;
 }
 .info-piece {
-  width: 25rem;
-  justify-content: space-around;
+  width: 89%;
   padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
 }
-.info-piece:last-child {
+.feature { /* Add gray background */
   background-color: lightgray;
+}
+@media only screen and (max-width: 480px) {
+  .showcase {
+    width: 100%;
+  }
+  .side-content {
+    width: 100%;
+    m
+  }
+  .info-piece {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .side-content img {
+    max-width: 100%;
+    margin: 0;
+  }
+  .info-text {
+    width: 100%;
+  }
+  .feature {
+    background-color: inherit;
+  }
 }
 /*--------------------Course Catalog Section--------------------*/
 #courses {
   background-color: lightgray;
+  padding-bottom: 2rem;
 }
 #courses h2 {
   text-align: center;
@@ -216,4 +242,21 @@ header a {
 }
 .course-info h3 {
   padding-left: 1rem;
+}
+@media only screen and (max-width: 480px) {
+  #courses {
+    background-color: white;
+  }
+  .course-info {
+    background-color: lightgray;
+    margin: .5rem .5rem;
+    width: 90%;
+    height: auto;
+    border-radius: .25rem;
+  }
+}
+/*--------------------Footer--------------------*/
+footer {
+  justify-content: space-between;
+  font-size: .75rem;
 }
