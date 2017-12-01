@@ -145,7 +145,7 @@ header a {
 }
 @media only screen and (max-width: 768px) {
   .banner-img img {
-    width: 25rem;
+    width: 22rem;
     height: 20rem;
   }
 }
