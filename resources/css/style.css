@@ -46,6 +46,9 @@ h3 {
   h2 {
     font-size: 1.75rem;
   }
+  nav {
+    font-size: .9em;
+  }
 }
 /*--------------------Universal Styles--------------------*/
 .container, .content {
