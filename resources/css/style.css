@@ -16,7 +16,7 @@ p {
 h1, h2, h3 {
   font-family: 'Rambla', 'Trebuchet MS', sans-serif;
   font-weight: 700;
-  padding: .75em 0;
+  padding: .5em 0;
 }
 h1 {
   font-size: 2.5rem;
@@ -78,7 +78,7 @@ button {
 button a {
   color: white;
 }
-
+/*---------Small Screens---------*/
 @media only screen and (max-width:959px) {
   .container, .content {
     width: 100%;
@@ -101,6 +101,71 @@ button a {
   }
   .mobile {
     display: inherit;
+  }
+}
+/*--------Feature article with sidebar content----------*/
+.showcase {
+  max-width: 30rem;
+  min-width: 20rem;
+  padding: 1.5rem 1rem;
+}
+.showcase img, video {
+  width: 100%;
+  overflow: hidden;
+}
+.side-content {
+  flex-direction: column;
+  width: 28rem;
+  align-items: flex-start;
+}
+.side-content img {
+  max-width: 8.4rem;
+  margin-right: 1rem;
+}
+.info-piece {
+  width: 85%;
+  padding: .5rem 1.25rem;
+  margin-top: 1.5rem;
+}
+.feature { /* Add background color*/
+  background-color: lightgray;
+}
+/*---------Small Screens---------*/
+@media only screen and (max-width: 768px) {
+  .showcase {
+    min-width: 15rem;
+  }
+  .side-content {
+    min-width: 13rem;
+  }
+  .side-content img {
+    max-width: 6.5rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .showcase {
+    width: 100%;
+    padding: 0;
+  }
+  .side-content {
+    width: 100%;
+    align-items: center;
+  }
+  .info-piece {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .side-content img {
+    max-width: 100%;
+    margin: 0;
+  }
+  .info-text {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .feature { /* Turns off feature background for mobile view*/
+    background-color: inherit;
   }
 }
 /*--------------------Header--------------------*/
@@ -148,7 +213,7 @@ header a {
   height: 28rem;
   background-color: lightgray;
 }
-
+/*---------Small Screens---------*/
 @media only screen and (max-width:480px) {
   #banner {
     height: auto;
@@ -171,68 +236,7 @@ header a {
   justify-content: space-between;
   padding-bottom: 1.5rem;
 }
-.showcase {
-  max-width: 30rem;
-  min-width: 20rem;
-  padding: 1.5rem 1rem;
-}
-.showcase img, video {
-  width: 100%;
-  overflow: hidden;
-}
-.side-content {
-  flex-direction: column;
-  width: 28rem;
-  align-items: flex-start;
-}
-.side-content img {
-  max-width: 8.4rem;
-  margin-right: 1rem;
-}
-.info-piece {
-  width: 85%;
-  padding: .5rem 1.25rem;
-  margin-top: 1.5rem;
-}
-.feature { /* Add gray background */
-  background-color: lightgray;
-}
-@media only screen and (max-width: 768px) {
-  .showcase {
-    min-width: 15rem;
-  }
-  .side-content {
-    min-width: 13rem;
-  }
-  .side-content img {
-    max-width: 6.5rem;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .showcase {
-    width: 100%;
-    padding: 0;
-  }
-  .side-content {
-    width: 100%;
-    align-items: center;
-  }
-  .info-piece {
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-  }
-  .side-content img {
-    max-width: 100%;
-    margin: 0;
-  }
-  .info-text {
-    width: 100%;
-  }
-  .feature {
-    background-color: inherit;
-  }
-}
+
 /*--------------------Course Catalog Section--------------------*/
 #courses {
   background-color: lightgray;
@@ -260,6 +264,7 @@ header a {
 .course-info h3 {
   padding-left: 1rem;
 }
+/*---------Small Screens---------*/
 @media only screen and (max-width: 480px) {
   #courses {
     background-color: white;
