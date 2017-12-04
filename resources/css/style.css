@@ -55,15 +55,15 @@ h3 {
   width: 960px;
   margin: 0 auto;
 }
+.content { /*Offset the header*/
+  padding-top: 4rem;
+}
 .flex {
   display: flex;
   align-items: center;
 }
 .mobile {
   display: none;
-}
-.content {
-  padding-top: 4rem;
 }
 button {
   background-color: darkblue;
@@ -85,16 +85,17 @@ button a {
     margin: 0;
     padding: 0;
   }
-  .content {
+  .content { /*Offset the header*/
     padding-top: 3rem;
   }
 }
 @media only screen and (max-width: 480px) {
+  /*Turns off desktop only elements/Turns on mobile versions*/
   html {
     font-size: 14px;
   }
-  .content {
-    padding-top: 3rem;
+  .content { /*Offset the header*/
+    padding-top: 2.5rem;
   }
   .desktop {
     display: none;
@@ -103,7 +104,7 @@ button a {
     display: inherit;
   }
 }
-/*--------Feature article with sidebar content----------*/
+/*--------Feature Article with Sidebar Content----------*/
 .showcase {
   max-width: 30rem;
   min-width: 20rem;
@@ -170,8 +171,8 @@ button a {
 }
 /*--------------------Header--------------------*/
 header {
-  background: white;
   background: linear-gradient(white, lightgray);
+  background-color: white;
   border-bottom: 2px darkgray solid;
   position: fixed;
   width: 100%;
