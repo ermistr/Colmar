@@ -1,29 +1,33 @@
 html, body {
-  font-family: 'Quicksand','Verdana', sans-serif;
+  background-color: #f8fcff;
+  font-family: 'Open Sans','Verdana', sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: left;
 }
 a {
-  color: blue;
+  color: #1b4965;
   text-decoration: none;
 }
 p {
   line-height: 1.5em;
   padding: 1em 0;
 }
+img, video {
+  border-radius: .5rem;
+}
 /*---------------Headings and 'special' font styles---------------*/
 h1, h2, h3 {
-  font-family: 'Rambla', 'Trebuchet MS', sans-serif;
-  font-weight: 700;
-  padding: .5em 0;
+  font-family: 'Open Sans', 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  padding: .5em 0 .25em 0;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 3.5rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 2rem;
 }
 h3 {
@@ -38,13 +42,16 @@ h3 {
   font-size: .75em;
   font-weight: bold;
 }
+.fancy { /*Script-style font*/
+  font-family: 'Sacramento', cursive;
+}
 @media only screen and (min-width:481px) and (max-width:767px) {
   h1 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
   nav {
     font-size: .9em;
@@ -66,17 +73,23 @@ h3 {
   display: none;
 }
 button {
-  background-color: darkblue;
+  background-color: #1b4965;
   border-radius: .25rem;
   color: white;
   display: block;
   font-size: 1.25em;
   line-height: 2;
   text-align: center;
+  transition: all .25s linear .25s;
   width: 85%;
 }
 button a {
-  color: white;
+  color: inherit;
+}
+button:hover {
+  background-color: #e4b363;
+  color: black;
+  font-weight: bold;
 }
 /*---------Small Screens---------*/
 @media only screen and (max-width:959px) {
@@ -129,7 +142,8 @@ button a {
   margin-top: 1.5rem;
 }
 .feature { /* Add background color*/
-  background-color: lightgray;
+  background-color: #e4b363;
+  border-radius: .5rem;
 }
 /*---------Small Screens---------*/
 @media only screen and (max-width: 768px) {
@@ -162,7 +176,6 @@ button a {
     margin: 0;
   }
   .info-text {
-    width: 100%;
     padding: 0 1rem;
   }
   .feature { /* Turns off feature background for mobile view*/
@@ -171,9 +184,9 @@ button a {
 }
 /*--------------------Header--------------------*/
 header {
-  background: linear-gradient(white, lightgray);
+  background: linear-gradient(white, #cae9ff);
   background-color: white;
-  border-bottom: 2px darkgray solid;
+  border-bottom: 2px #1b4965 solid;
   position: fixed;
   width: 100%;
   z-index: 20;
@@ -212,12 +225,18 @@ header a {
 /*--------------------Banner--------------------*/
 #banner {
   height: 28rem;
-  background-color: lightgray;
+  background-color: #cae9ff;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
 }
 /*---------Small Screens---------*/
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:767px) {
   #banner {
     height: auto;
+  }
+}
+@media only screen and (max-width:480px) {
+  #banner {
     flex-direction: column;
     padding-bottom: 2rem;
   }
@@ -228,7 +247,7 @@ header a {
   justify-content: space-between;
   padding-bottom: 1.5rem;
 }
-#thesis h2 {
+#thesis h1 {
   width: 100%;
   text-align: center;
 }
@@ -240,10 +259,13 @@ header a {
 
 /*--------------------Course Catalog Section--------------------*/
 #courses {
-  background-color: lightgray;
+  background-color: #1b4965;
+  border-radius: .5rem;
   padding-bottom: 2rem;
 }
-#courses h2 {
+#courses h1 {
+  color: #f8fcff;
+  font-weight: normal;
   text-align: center;
 }
 .catalog {
@@ -252,11 +274,14 @@ header a {
 }
 .course-info {
   background-color: white;
+  border: 3px #cae9ff solid;
+  border-radius: .5rem;
   margin: 1rem 1rem;
+  transition: .25s linear .25s;
   width: 15rem;
   height: 22rem;
 }
-.course-img {
+.course-info img {
   width: 100%;
 }
 .course-info p {
@@ -267,19 +292,28 @@ header a {
 }
 /*---------Small Screens---------*/
 @media only screen and (max-width: 480px) {
-  #courses {
-    background-color: white;
-  }
   .course-info {
-    background-color: lightgray;
-    margin: .5rem .5rem;
-    width: 90%;
-    height: auto;
+    background-color: #cae9ff;
     border-radius: .25rem;
+    height: auto;
+    margin: .5rem .5rem;
+    padding: 1rem 0;
+    transition: all .25s linear .25s;
+    width: 90%;
   }
+  .course-info:hover {
+    background-color: #e4b363;
+    border: .5px #e4b363 solid;
+  }
+  .course-info a {
+    color: black;
+    font-weight: bold;
+  }
+
 }
 /*--------------------Footer--------------------*/
 footer {
+  border-top: 1px #1b4965 dotted;
   justify-content: space-between;
   font-size: .75rem;
 }
